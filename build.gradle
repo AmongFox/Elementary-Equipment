@@ -82,6 +82,6 @@ publishing {
 pmd {
 	toolVersion = "7.0.0"
 	ruleSets = []
-	ruleSetFiles = files("ruleset.xml")
+	ruleSetFiles = files("config/pmd/ruleset.xml")
 	ignoreFailures = true
 }
