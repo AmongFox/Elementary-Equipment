@@ -1,0 +1,29 @@
+{
+  "vegetation": [
+    {
+      "block": "minecraft:grass",
+      "weight": 70,
+      "type": "short"
+    },
+    {
+      "block": "minecraft:tall_grass[half=upper]",
+      "weight": 15,
+      "type": "tall_upper"
+    },
+    {
+      "block": "minecraft:tall_grass[half=lower]",
+      "weight": 15,
+      "type": "tall_lower"
+    },
+    {
+      "block": "minecraft:dandelion",
+      "weight": 10,
+      "type": "flower"
+    },
+    {
+      "block": "minecraft:poppy",
+      "weight": 10,
+      "type": "flower"
+    }
+  ]
+}

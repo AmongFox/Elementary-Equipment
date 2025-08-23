@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ElementalWeaponsRules">
+
+    <description>PMD 7+ Rules for Minecraft 1.20.1 Fabric Mod</description>
+
+    <!-- Подключаем основные категории правил -->
+    <rule ref="category/java/bestpractices.xml"/>
+<!--    <rule ref="category/java/errorprone.xml"/>-->
+<!--    <rule ref="category/java/codestyle.xml"/>-->
+<!--    <rule ref="category/java/design.xml"/>-->
+
+</ruleset>
