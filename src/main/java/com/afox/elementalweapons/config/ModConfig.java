@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Set;
 
+@SuppressWarnings("unused")
 public class ModConfig {
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static final Path CONFIG_PATH = FabricLoader.getInstance().getConfigDir().resolve("elemental-weapons.json");
@@ -128,7 +129,7 @@ public class ModConfig {
             }
         }
         public static class General {
-            protected final static String README = "Select entities affected by ability: (all, players, animals, monsters)";
+            private final static String README = "Select entities affected by ability: (all, players, animals, monsters)";
             public Set<String> entityScopes = Set.of("all");
         }
 
