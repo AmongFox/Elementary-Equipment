@@ -42,18 +42,18 @@ public class Items {
     }
 
     public static void addToItemGroup() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.addAfter(
-                    net.minecraft.item.Items.DIAMOND_SWORD,
-                    FIRE_SWORD,
-                    FROZEN_SWORD,
-                    ELECTRIC_SWORD,
-                    MAGIC_SWORD,
-                    ANCIENT_SWORD,
-                    MOUNTAIN_SWORD,
-                    HURRICANE_SWORD,
-                    SEA_SWORD
-            );
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries ->
+                entries.addAfter(
+                        net.minecraft.item.Items.DIAMOND_SWORD,
+                        FIRE_SWORD,
+                        FROZEN_SWORD,
+                        ELECTRIC_SWORD,
+                        MAGIC_SWORD,
+                        ANCIENT_SWORD,
+                        MOUNTAIN_SWORD,
+                        HURRICANE_SWORD,
+                        SEA_SWORD
+                )
+        );
     }
 }

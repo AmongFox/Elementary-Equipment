@@ -32,15 +32,15 @@ public class EffectsUtils {
             int effectDuration
     ) {
         for (LivingEntity livingEntity : livingEntities) {
-            effects.forEach((effect, amplifier) -> {
-                livingEntity.addStatusEffect(new StatusEffectInstance(
-                        effect,
-                        effectDuration,
-                        amplifier,
-                        false,
-                        false
-                ));
-            });
+            effects.forEach((effect, amplifier) ->
+                    livingEntity.addStatusEffect(new StatusEffectInstance(
+                            effect,
+                            effectDuration,
+                            amplifier,
+                            false,
+                            false
+                    ))
+            );
         }
     }
 

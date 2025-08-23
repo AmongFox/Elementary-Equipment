@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class MountainSwordPassiveAbility {
     private static final int EFFECT_DURATION = 20 * 16;
-    public static void execute(LivingEntity target, LivingEntity attacker) {
+    public static void execute(@SuppressWarnings("unused") LivingEntity target, LivingEntity attacker) {
         if (attacker.getWorld().isClient) return;
 
         if (attacker.getWorld() instanceof ServerWorld serverWorld) {
