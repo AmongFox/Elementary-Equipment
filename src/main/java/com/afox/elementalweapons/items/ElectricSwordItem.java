@@ -25,7 +25,7 @@ public class ElectricSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public ElectricSwordItem() {
-        super(ToolMaterials.DIAMOND, 4, -3.2F, new Settings());
+        super(ToolMaterials.DIAMOND, 5, -3.2F, new Settings());
     }
 
     /**

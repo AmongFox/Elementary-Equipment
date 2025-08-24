@@ -25,7 +25,7 @@ public class HurricaneSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public HurricaneSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -2.0F, new Item.Settings());
+        super(ToolMaterials.DIAMOND, 2, -1.4F, new Item.Settings());
     }
 
     /**

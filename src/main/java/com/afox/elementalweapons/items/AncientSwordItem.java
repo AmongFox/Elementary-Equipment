@@ -24,7 +24,7 @@ public class AncientSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public AncientSwordItem() {
-        super(ToolMaterials.DIAMOND, 4, -3.2f, new Settings());
+        super(ToolMaterials.DIAMOND, 3, -2.2F, new Settings());
     }
 
     /**

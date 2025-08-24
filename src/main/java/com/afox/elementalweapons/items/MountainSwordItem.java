@@ -22,7 +22,7 @@ public class MountainSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public MountainSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -2.0f, new Settings());
+        super(ToolMaterials.DIAMOND, 6, -3.8f, new Settings());
     }
 
     /**

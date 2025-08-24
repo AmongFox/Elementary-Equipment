@@ -22,7 +22,7 @@ public class SeaSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public SeaSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -3.0f, new Settings());
+        super(ToolMaterials.DIAMOND, 3, -2.8f, new Settings());
     }
 
     /**

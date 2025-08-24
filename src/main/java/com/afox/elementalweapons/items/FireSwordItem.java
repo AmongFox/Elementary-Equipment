@@ -25,7 +25,7 @@ public class FireSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public FireSwordItem() {
-        super(ToolMaterials.DIAMOND, 4, -2.0F, new Settings());
+        super(ToolMaterials.DIAMOND, 4, -2.6F, new Settings());
     }
 
     /**
