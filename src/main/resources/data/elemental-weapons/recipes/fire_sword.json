@@ -1,20 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    " / ",
-    "   "
-  ],
-  "key": {
-    "#": {
-      "item": "minecraft:fire_charge"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#/#",
+        "FDF",
+        "#/#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blaze_powder"
+        },
+        "/": {
+            "item": "minecraft:blaze_rod"
+        },
+        "F": {
+            "item": "minecraft:fire_charge"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        }
     },
-    "/": {
-      "item": "minecraft:stick"
+    "result": {
+        "item": "elemental-weapons:fire_sword",
+        "count": 1
     }
-  },
-  "result": {
-    "item": "minecraft:diamond_sword",
-    "count": 1
-  }
 }
