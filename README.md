@@ -6,43 +6,43 @@
 
 # Elemental Weapons
 
-**Модификация для Minecraft, добавляющая мощное элементальное оружие с уникальными пассивными и активными способностями, использующая кастомные механики игры.**
+**A modification for Minecraft that adds powerful elemental weapons with unique passive and active abilities, using custom game mechanics.**
 
-## 🌟 Особенности
+## 🌟 Features
 
-### 🗡️ Элементальное Оружие
-|      Оружие       |        Стихия        |              Пассивная способность               |                                        Активная способность                                        |
-|:-----------------:|:--------------------:|:------------------------------------------------:|:--------------------------------------------------------------------------------------------------:|
-|    Древний меч    |      🌿 Дендро       |    Наносит повышенный урон в биомах джунглей     |                        Создаёт вокруг игрока цветение, накладывает эффекты                         |
-| Электрический меч | ⚡ Электро + 🌊 Гидро | С небольшим шансом может призвать молнию на цель |                 Призывает в мир шторм, нанося удар молнией на ближайших сущностей                  |
-|   Огненный меч    |       🔥 Пиро        |            С шансом, поджигает врага             |                                      Призывает огненный заряд                                      |
-|    Ледяной меч    |       ❄️ Крио        |           С шансом, замораживает врага           |                                 Замораживает всех сущностей вокруг                                 |
-|   Ураганный меч   |      🌪️ Анемо       |                 Отталкивает цель                 |                              Отталкивает всех сущностей вокруг игрока                              |
-|  Магический меч   |      ⚡ Электро       |           Наносит магический урон цели           | Создаёт магический круг, накладывая негативные эффекты на противников и положительные на союзников |
-|    Горный меч     |        🌋 Гео        |               Даёт бонус к защите                |             Призывает "землетрясение", подбрасывая врагов вверх и ставя под ними шипы              |
-|    Морской меч    |       🌊 Гидро       |              Даёт бонус к плаванию               |                                  Позволяет совершить рывок в воде                                  |
+### 🗡️ Elemental Weapon
+|       Weapon       |                 Element                    |                    Passive ability                   |                                       Active ability                                       |
+|:------------------:|:------------------------------------------:|:----------------------------------------------------:|:------------------------------------------------------------------------------------------:|
+| The ancient sword  |                 🌿 Dendro                  |     Causes increased damage in the jungle biomes     |                     Creates blooms around the player, imposes effects                      |
+|   Electric sword   |            ⚡ Electro + 🌊 Hydro            | Can summon lightning to a target with a small chance |           Summons a storm into the world, striking lightning at nearby entities            |
+|     Fire sword     |                  🔥 Pyro                   |        With a chance, sets fire to the enemy         |                                   Summons a fire charge                                    |
+|     Ice sword      | ❄️ Krio / With a chance, freezes the enemy |             Freezes all entities around              |                                Freezes all entities around                                 |
+|  Hurricane Sword   |       🌪️ Anemo / Repels the target        |        Repels all entities around the player         |                           Repels all entities around the player                            |
+|    Magic Sword     |                 ⚡ Electro                  |          Deals magical damage to the target          | Creates a magic circle, imposing negative effects on opponents and positive ones on allies |
+|   Mountain Sword   |                    Geo                     |                Gives a defense bonus                 |        Summons an "earthquake" by throwing enemies up and placing spikes under them        |
+|     Sea Sword      |                  🌊 Hydro                  |                Gives a swimming bonus                |                           Allows you to make a dash in the water                           |
 
-### 🔮 Система способностей
-- **Пассивные способности** - постоянно действующие бонусы
-- **Активные способности** - активируются по ПКМ
+### 🔮 Ability system
+- **Passive abilities** - permanent bonuses
+- **Active abilities** - it is activated by right-clicking
 
-### ⚡ Кастомные механики
-- Уникальные частицы и визуальные эффекты
-- Специальные звуки для каждого элемента
-- Система отката для баланса способностей
+### ⚡ Custom mechanics
+- Unique particles and visual effects
+- Special sounds for each element
+- Rollback system for balancing abilities
 
-## 📦 Установка
+## 📦 Installation
 
-### Требования
+### Requirements
 - Minecraft 1.20.1
 - Fabric Loader 0.17.2+
 - Java 17+
 
-## ⚙️ Файл конфигурации
+## ⚙️ Configuration file
 
-**Мод имеет полную систему настройки через файл** ```config/elemental-weapons.json```
+**The mod has a complete configuration system via the file** ```config/elementary-weapons.json```
 
-### Основные настройки
+### Basic settings
 ```json
 "general": {
   "README": "Select entities affected by ability: (all, players, animals, monsters)",
@@ -52,13 +52,13 @@
 }
 ```
 
-### Установка отката на способности
+### Setting rollback on abilities
 ```json
 "fireSword": {
-  "activeCooldown": 45, // Откат активной способности
-  "passiveCooldown": 30, // Откат пассивной способности
-  "passiveChance": 0.6, // Шанс активации пассивной способности
-  "xpCost": 16, // Затрата опыта для активации активной способности
-  "durabilityCost": 2 // Износ оружия для пассивной способности
+    "activeCooldown": 45, // Rollback of active ability
+    "passiveCooldown": 30, // Rollback of passive ability
+    "passiveChance": 0.6, // Chance of activating a passive ability
+    "xpPost": 16, // Experience spent to activate an active ability
+    "durabilityCost": 2 // Weapon wear for passive ability
 },
 ```
