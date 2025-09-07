@@ -4,7 +4,7 @@
 ![Static Badge](https://img.shields.io/badge/fabric-%2300CC00?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/continued-%23C7007D?style=for-the-badge&label=status)
 
-# Elemental Weapons
+# Elementary Equipment
 
 **A modification for Minecraft that adds powerful elemental weapons with unique passive and active abilities, using custom game mechanics.**
 
