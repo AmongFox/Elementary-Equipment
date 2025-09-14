@@ -68,7 +68,7 @@ public class AncientSwordActiveAbility {
                         if (random.nextFloat() <= TALL_GRASS_RATIO) {
                             placeTallGrass(serverWorld, mutablePos);
                         } else {
-                            serverWorld.setBlockState(mutablePos, Blocks.GRASS.getDefaultState());
+                            serverWorld.setBlockState(mutablePos, Blocks.SHORT_GRASS.getDefaultState());
                         }
                     }
                 }
