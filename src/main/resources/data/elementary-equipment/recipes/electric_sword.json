@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "cDc",
+        "RnR"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "L": {
+            "item": "minecraft:lightning_rod"
+        },
+        "c": {
+            "item": "minecraft:copper_ingot"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "n": {
+            "item": "minecraft:netherite_ingot"
+        }
+    },
+    "result": {
+        "item": "elementary-equipment:electric_sword",
+        "count": 1
+    }
+}

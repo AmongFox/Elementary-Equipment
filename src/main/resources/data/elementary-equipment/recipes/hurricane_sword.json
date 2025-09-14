@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#Q#",
+        "LIL",
+        "#E#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:feather"
+        },
+        "Q": {
+            "item": "minecraft:quartz"
+        },
+        "L": {
+            "item": "minecraft:lapis_lazuli"
+        },
+        "I": {
+            "item": "minecraft:iron_sword"
+        },
+        "E": {
+            "item": "minecraft:echo_shard"
+        }
+    },
+    "result": {
+        "item": "elementary-equipment:hurricane_sword",
+        "count": 1
+    }
+}

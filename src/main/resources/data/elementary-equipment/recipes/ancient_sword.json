@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#L#",
+        "gGg",
+        "#D#"
+    ],
+    "key": {
+        "#": {
+            "tag": "minecraft:flowers"
+        },
+        "L": {
+            "item": "minecraft:lime_dye"
+        },
+        "g": {
+            "item": "minecraft:gold_ingot"
+        },
+        "G": {
+            "item": "minecraft:golden_sword"
+        },
+        "D": {
+            "item": "minecraft:diamond"
+        }
+    },
+    "result": {
+        "item": "elementary-equipment:ancient_sword",
+        "count": 1
+    }
+}

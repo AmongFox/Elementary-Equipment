@@ -1,26 +1,26 @@
 {
 	"schemaVersion": 1,
-	"id": "elemental-weapons",
+	"id": "elementary-equipment",
 	"version": "${version}",
-	"name": "Elemental Weapons",
+	"name": "Elementary Equipment",
 	"description": "Откройте для себя новое элементальное оружие, использующее ванильные механики Minecraft.",
 	"authors": [
 		"AmongFox"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/AmongFox/Elemental-Weapons"
+		"sources": "https://github.com/AmongFox/Elementary-Equipment"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/elemental-weapons/icon.png",
+	"icon": "assets/elementary-equipment/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.afox.elementalweapons.ModElementalWeapons"
+			"com.afox.elementaryequipment.ModElementaryEquipment"
 		]
 	},
 	"mixins": [
-		"elemental-weapons.mixins.json"
+		"elementary-equipment.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",

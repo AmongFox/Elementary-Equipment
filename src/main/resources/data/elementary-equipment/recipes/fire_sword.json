@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#/#",
+        "FDF",
+        "#/#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:blaze_powder"
+        },
+        "/": {
+            "item": "minecraft:blaze_rod"
+        },
+        "F": {
+            "item": "minecraft:fire_charge"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        }
+    },
+    "result": {
+        "item": "elementary-equipment:fire_sword",
+        "count": 1
+    }
+}

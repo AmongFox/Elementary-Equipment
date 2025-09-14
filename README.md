@@ -6,7 +6,7 @@
 
 # Elementary Equipment
 
-**A modification for Minecraft that adds powerful elemental weapons with unique passive and active abilities, using custom game mechanics.**
+**A modification for Minecraft that adds powerful elementary equipment with unique passive and active abilities, using custom game mechanics.**
 
 ## 🌟 Features
 
@@ -34,7 +34,7 @@
 ## 📦 Installation
 
 ### Requirements
-- Minecraft 1.20.1
+- Minecraft 1.20.1-1.20.4
 - Fabric Loader 0.17.2+
 - Java 17+
 
