@@ -14,6 +14,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.BlockStateParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -142,7 +143,7 @@ public class MountainSwordActiveAbility {
     }
 
     private static void applyEffectsToEntities(LivingEntity livingEntity) {
-        final Map<StatusEffect, Integer> effects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> effects = Map.of(
                 StatusEffects.POISON, 1,
                 StatusEffects.SLOWNESS, 4,
                 StatusEffects.WEAKNESS, 2

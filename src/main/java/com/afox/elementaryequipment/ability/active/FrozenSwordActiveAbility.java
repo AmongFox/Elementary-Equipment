@@ -9,6 +9,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
@@ -116,7 +117,7 @@ public class FrozenSwordActiveAbility {
     }
 
     private static void applyEffectsToEntity(LivingEntity livingEntity) {
-        final Map<StatusEffect, Integer> effects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> effects = Map.of(
                 StatusEffects.SLOWNESS, 100,
                 StatusEffects.WEAKNESS, 100,
                 StatusEffects.MINING_FATIGUE, 100

@@ -5,6 +5,7 @@ import com.afox.elementaryequipment.ability.passive.HurricaneSwordPassiveAbility
 import com.afox.elementaryequipment.config.ModConfig;
 import com.afox.elementaryequipment.utils.CooldownUtils;
 import com.afox.elementaryequipment.utils.ExperienceUtils;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -25,7 +26,14 @@ public class HurricaneSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public HurricaneSwordItem() {
-        super(ToolMaterials.DIAMOND, 2, -1.4F, new Item.Settings());
+        super(ToolMaterials.DIAMOND, new Item.Settings()
+                .maxDamage(ToolMaterials.DIAMOND.getDurability())
+                .attributeModifiers(SwordItem.createAttributeModifiers(
+                        ToolMaterials.DIAMOND,
+                        2,
+                        -1.4F
+                ))
+        );
     }
 
     /**
@@ -49,7 +57,7 @@ public class HurricaneSwordItem extends SwordItem {
         if (ABILITY_PASSIVE_COOLDOWN.checkCooldown(attacker.getWorld()) && random.nextFloat() < ABILITY_PASSIVE_CHANCE) {
             HurricaneSwordPassiveAbility.execute(target, attacker);
             ABILITY_PASSIVE_COOLDOWN.updateCooldown(attacker.getWorld());
-            stack.damage(DURABILITY_COST, attacker, e -> e.sendToolBreakStatus(attacker.getActiveHand()));
+            stack.damage(DURABILITY_COST, attacker, EquipmentSlot.MAINHAND);
         }
 
         return super.postHit(stack, target, attacker);

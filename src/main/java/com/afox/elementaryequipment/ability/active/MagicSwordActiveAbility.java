@@ -7,6 +7,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -112,14 +113,14 @@ public class MagicSwordActiveAbility {
         }
 
         private void applyEffectsToEntities(ServerWorld serverWorld, PlayerEntity player) {
-            final Map<StatusEffect, Integer> hostileEffects = Map.of(
+            final Map<RegistryEntry<StatusEffect>, Integer> hostileEffects = Map.of(
                     StatusEffects.WEAKNESS, 0,
                     StatusEffects.SLOWNESS, 2
             );
 
-            final Map<StatusEffect, Integer> friendlyEffects = Map.of(
+            final Map<RegistryEntry<StatusEffect>, Integer> friendlyEffects = Map.of(
                     StatusEffects.REGENERATION, 0,
-                    StatusEffects.ABSORPTION, 1,
+                    StatusEffects.ABSORPTION, 0,
                     StatusEffects.SPEED, 0
             );
 

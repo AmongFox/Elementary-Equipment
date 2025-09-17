@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -46,10 +47,10 @@ public class SeaSwordPassiveAbility {
     }
 
     private static void applyEffectsToEntity(LivingEntity target, LivingEntity attacker) {
-        final Map<StatusEffect, Integer> hostileEffects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> hostileEffects = Map.of(
                 StatusEffects.POISON, 0
         );
-        final Map<StatusEffect, Integer> friendlyEffects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> friendlyEffects = Map.of(
                 StatusEffects.DOLPHINS_GRACE, 2,
                 StatusEffects.CONDUIT_POWER, 0
         );

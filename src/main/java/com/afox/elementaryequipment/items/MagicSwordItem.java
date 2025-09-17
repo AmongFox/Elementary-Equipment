@@ -5,6 +5,7 @@ import com.afox.elementaryequipment.ability.passive.MagicSwordPassiveAbility;
 import com.afox.elementaryequipment.config.ModConfig;
 import com.afox.elementaryequipment.utils.CooldownUtils;
 import com.afox.elementaryequipment.utils.ExperienceUtils;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -23,7 +24,14 @@ public class MagicSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public MagicSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -2.0f, new Item.Settings());
+        super(ToolMaterials.DIAMOND, new Item.Settings()
+                .maxDamage(ToolMaterials.DIAMOND.getDurability())
+                .attributeModifiers(SwordItem.createAttributeModifiers(
+                        ToolMaterials.DIAMOND,
+                        3,
+                        -2.0F
+                ))
+        );
     }
 
     /**
@@ -44,7 +52,7 @@ public class MagicSwordItem extends SwordItem {
         if (ABILITY_PASSIVE_COOLDOWN.checkCooldown(attacker.getWorld())) {
             MagicSwordPassiveAbility.execute(target, attacker);
             ABILITY_PASSIVE_COOLDOWN.updateCooldown(attacker.getWorld());
-            stack.damage(DURABILITY_COST, attacker, e -> e.sendToolBreakStatus(attacker.getActiveHand()));
+            stack.damage(DURABILITY_COST, attacker, EquipmentSlot.MAINHAND);
         }
 
         return super.postHit(stack, target, attacker);

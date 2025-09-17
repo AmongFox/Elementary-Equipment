@@ -8,6 +8,7 @@ import net.minecraft.entity.mob.Monster;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.registry.entry.RegistryEntry;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class EffectsUtils {
 
     public static void applyEffectsToEntity(
             LivingEntity livingEntity,
-            Map<StatusEffect, Integer> effects,
+            Map<RegistryEntry<StatusEffect>, Integer> effects,
             int effectDuration
     ) {
         effects.forEach((effect, amplifier) -> livingEntity.addStatusEffect(
@@ -28,7 +29,7 @@ public class EffectsUtils {
 
     public static void applyEffectsToEntities(
             List<LivingEntity> livingEntities,
-            Map<StatusEffect, Integer> effects,
+            Map<RegistryEntry<StatusEffect>, Integer> effects,
             int effectDuration
     ) {
         for (LivingEntity livingEntity : livingEntities) {
@@ -46,8 +47,8 @@ public class EffectsUtils {
 
     public static void applyEffectsInScopesToEntities(
             List<LivingEntity> livingEntities,
-            Map<StatusEffect, Integer> badEffects,
-            Map<StatusEffect, Integer> goodEffects,
+            Map<RegistryEntry<StatusEffect>, Integer> badEffects,
+            Map<RegistryEntry<StatusEffect>, Integer> goodEffects,
             PlayerEntity player,
             int effectDuration
     ) {

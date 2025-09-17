@@ -5,6 +5,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -45,7 +46,7 @@ public class MountainSwordPassiveAbility {
     }
 
     private static void applyEffectsToEntity(LivingEntity attacker) {
-        final Map<StatusEffect, Integer> effects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> effects = Map.of(
                 StatusEffects.RESISTANCE, 1,
                 StatusEffects.FIRE_RESISTANCE, 0,
                 StatusEffects.ABSORPTION, 1

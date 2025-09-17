@@ -5,8 +5,10 @@ import com.afox.elementaryequipment.ability.passive.SeaSwordPassiveAbility;
 import com.afox.elementaryequipment.config.ModConfig;
 import com.afox.elementaryequipment.utils.CooldownUtils;
 import com.afox.elementaryequipment.utils.ExperienceUtils;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;
@@ -22,7 +24,14 @@ public class SeaSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public SeaSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -2.8f, new Settings());
+        super(ToolMaterials.DIAMOND, new Item.Settings()
+                .maxDamage(ToolMaterials.DIAMOND.getDurability())
+                .attributeModifiers(SwordItem.createAttributeModifiers(
+                        ToolMaterials.DIAMOND,
+                        3,
+                        -2.8F
+                ))
+        );
     }
 
     /**
@@ -43,7 +52,7 @@ public class SeaSwordItem extends SwordItem {
         if (ABILITY_PASSIVE_COOLDOWN.checkCooldown(attacker.getWorld()) && attacker.isTouchingWater()) {
             SeaSwordPassiveAbility.execute(target, attacker);
             ABILITY_PASSIVE_COOLDOWN.updateCooldown(attacker.getWorld());
-            stack.damage(DURABILITY_COST, attacker, e -> e.sendToolBreakStatus(attacker.getActiveHand()));
+            stack.damage(DURABILITY_COST, attacker, EquipmentSlot.MAINHAND);
         }
 
         return super.postHit(stack, target, attacker);

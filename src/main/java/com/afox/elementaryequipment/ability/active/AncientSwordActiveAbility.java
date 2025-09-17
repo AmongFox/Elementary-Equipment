@@ -13,6 +13,7 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.EvokerFangsEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -68,7 +69,7 @@ public class AncientSwordActiveAbility {
                         if (random.nextFloat() <= TALL_GRASS_RATIO) {
                             placeTallGrass(serverWorld, mutablePos);
                         } else {
-                            serverWorld.setBlockState(mutablePos, Blocks.GRASS.getDefaultState());
+                            serverWorld.setBlockState(mutablePos, Blocks.SHORT_GRASS.getDefaultState());
                         }
                     }
                 }
@@ -127,12 +128,12 @@ public class AncientSwordActiveAbility {
     }
 
     private static void applyEffectsToEntities(List<LivingEntity> livingEntities, PlayerEntity player) {
-        final Map<StatusEffect, Integer> hostileEffects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> hostileEffects = Map.of(
                 StatusEffects.SLOWNESS, 3,
                 StatusEffects.POISON, 1
         );
 
-        final Map<StatusEffect, Integer> friendlyEffects = Map.of(
+        final Map<RegistryEntry<StatusEffect>, Integer> friendlyEffects = Map.of(
                 StatusEffects.REGENERATION, 0,
                 StatusEffects.HEALTH_BOOST, 2,
                 StatusEffects.JUMP_BOOST, 1,

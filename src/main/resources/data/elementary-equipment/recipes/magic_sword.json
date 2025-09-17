@@ -32,7 +32,7 @@
         }
     },
     "result": {
-        "item": "elementary-equipment:magic_sword",
+        "id": "elementary-equipment:magic_sword",
         "count": 1
     }
 }

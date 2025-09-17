@@ -24,7 +24,7 @@ public class CustomFireballEntity extends SmallFireballEntity {
         this.getWorld().playSound(
                 null,
                 this.getX(), this.getY(), this.getZ(),
-                SoundEvents.ENTITY_GENERIC_EXPLODE,
+                SoundEvents.ENTITY_GENERIC_EXPLODE.value(),
                 SoundCategory.BLOCKS,
                 5.0F,
                 0.3F

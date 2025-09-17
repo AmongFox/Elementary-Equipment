@@ -6,8 +6,10 @@ import com.afox.elementaryequipment.config.ModConfig;
 import com.afox.elementaryequipment.utils.CooldownUtils;
 import com.afox.elementaryequipment.utils.ExperienceUtils;
 import com.afox.elementaryequipment.utils.WorldBiomeUtils;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;
@@ -25,7 +27,14 @@ public class FrozenSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public FrozenSwordItem() {
-        super(ToolMaterials.DIAMOND, 4, -2.6F, new Settings());
+        super(ToolMaterials.DIAMOND, new Item.Settings()
+                .maxDamage(ToolMaterials.DIAMOND.getDurability())
+                .attributeModifiers(SwordItem.createAttributeModifiers(
+                        ToolMaterials.DIAMOND,
+                        4,
+                        -2.6F
+                ))
+        );
     }
 
     /**
@@ -53,7 +62,7 @@ public class FrozenSwordItem extends SwordItem {
         if (ABILITY_PASSIVE_COOLDOWN.checkCooldown(attacker.getWorld()) && random.nextFloat() < this.ABILITY_PASSIVE_CHANCE) {
             FrozenSwordPassiveAbility.execute(target, attacker);
             ABILITY_PASSIVE_COOLDOWN.updateCooldown(attacker.getWorld());
-            stack.damage(DURABILITY_COST, attacker, e -> e.sendToolBreakStatus(attacker.getActiveHand()));
+            stack.damage(DURABILITY_COST, attacker, EquipmentSlot.MAINHAND);
         }
 
         return super.postHit(stack, target, attacker);

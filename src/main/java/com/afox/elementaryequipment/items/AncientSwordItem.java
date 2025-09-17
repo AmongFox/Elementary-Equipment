@@ -6,8 +6,10 @@ import com.afox.elementaryequipment.config.ModConfig;
 import com.afox.elementaryequipment.utils.CooldownUtils;
 import com.afox.elementaryequipment.utils.ExperienceUtils;
 import com.afox.elementaryequipment.utils.WorldBiomeUtils;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterials;
@@ -24,7 +26,14 @@ public class AncientSwordItem extends SwordItem {
     private static final int DURABILITY_COST = config.durabilityCost;
 
     public AncientSwordItem() {
-        super(ToolMaterials.DIAMOND, 3, -2.2F, new Settings());
+        super(ToolMaterials.DIAMOND, new Item.Settings()
+                .maxDamage(ToolMaterials.DIAMOND.getDurability())
+                .attributeModifiers(SwordItem.createAttributeModifiers(
+                        ToolMaterials.DIAMOND,
+                        3,
+                        -2.2F
+                ))
+        );
     }
 
     /**
@@ -46,7 +55,7 @@ public class AncientSwordItem extends SwordItem {
         if (AbilityPassiveCooldown.checkCooldown(attacker.getWorld()) && WorldBiomeUtils.isInJungleBiome(attacker)) {
             AncientSwordPassiveAbility.execute(target, attacker);
             AbilityPassiveCooldown.updateCooldown(attacker.getWorld());
-            stack.damage(DURABILITY_COST, attacker, e -> e.sendToolBreakStatus(attacker.getActiveHand()));
+            stack.damage(DURABILITY_COST, attacker, EquipmentSlot.MAINHAND);
         }
 
         return super.postHit(stack, target, attacker);
