@@ -40,7 +40,7 @@
 
 ## ⚙️ Configuration file
 
-**The mod has a complete configuration system via the file** ```config/elementary-weapons.json```
+**The mod has a complete configuration system via the file** ```config/elementary-equipment.json```
 
 ### Basic settings
 ```json
