@@ -10,7 +10,7 @@
 
 ## 🌟 Features
 
-### 🗡️ Elemental Weapon
+### 🗡️ Elementary Equipment
 |       Weapon       |                 Element                    |                    Passive ability                   |                                       Active ability                                       |
 |:------------------:|:------------------------------------------:|:----------------------------------------------------:|:------------------------------------------------------------------------------------------:|
 | The ancient sword  |                 🌿 Dendro                  |     Causes increased damage in the jungle biomes     |                     Creates blooms around the player, imposes effects                      |
