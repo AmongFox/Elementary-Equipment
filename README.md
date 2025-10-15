@@ -1,5 +1,3 @@
-<img src="icons/banner.png" width="100%" height="100%" alt="Project Banner">
-
 ![Static Badge](https://img.shields.io/badge/1.20.1-information?style=for-the-badge&label=version&color=%2393002F)
 ![Static Badge](https://img.shields.io/badge/fabric-%2300CC00?style=for-the-badge)
 ![Static Badge](https://img.shields.io/badge/continued-%23C7007D?style=for-the-badge&label=status)
